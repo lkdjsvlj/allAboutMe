@@ -5,6 +5,8 @@
 //  Created by Scholar on 25/07/2024.
 //
 
+// fake comment
+
 import SwiftUI
 
 struct ContentView: View {

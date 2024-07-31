@@ -10,80 +10,63 @@
 import SwiftUI
 
 struct ContentView: View {
+    // @State private var nav =
     var body: some View {
         NavigationStack {
+            // START ALWAYS STAYS
             ZStack {
-                // START ALWAYS STAYS
                 // background
-                Color(red: 1.0, green: 1.0, blue: 0.0, opacity: 0.2)
+                //Color(red: 1.73, green: 0.46, blue: 0.36, opacity: 1.0)
+                //Color(red:0.234, green: 0.14, blue: 0.085, opacity: 1.0)
+                Color(red: 3.0, green: 0.3, blue: 0.0, opacity: 0.45)
                     .ignoresSafeArea()
                 // whole body
                 VStack(spacing: 12.0) {
                     // title
-                    Text("ALL ABOUT ME: LAURIE🍾")
-                        .foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.2, opacity: 1.0))
+                    Text("ALL ABOUT ME: LAURIE🍻")
+                        .foregroundColor(Color(red:0.234, green: 0.14, blue: 0.085, opacity: 1.0))
                         .padding()
                         .font(.title)
                         .fontWeight(.bold)
-                        .background(Rectangle().foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.2, opacity: 0.4)))
+                        .background(Rectangle().foregroundColor(Color(red: 1.73, green: 0.46, blue: 0.36, opacity: 1.0)))
                         .cornerRadius(30)
                         .shadow(radius: 15)
                     // END ALWAYS STAYS
                     
-                    // blue box
-                    VStack(alignment: .center) {
-                        
-                        Text("KEY FACTS")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color(red: 0.0, green: 0.4, blue: 1.0, opacity: 1.0))
-                        HStack(alignment: .center) {
-                            Image("lozSelfie")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(30)
-                            VStack(alignment: .leading) {
-                                Text("name: lorelei ann moss")
-                                    .fontWeight(.regular)
-                                Text("nickname: laurie, lozza")
-                                    .fontWeight(.regular)
-                                Text("birthday: december 19")
-                                    .fontWeight(.regular)
-                                Text("age: 17, b. 2006")
-                                    .fontWeight(.regular)
-                                Text("hobbies: running, yapping, painting her nails, dying her hair, going to gigs, doing silly little drawings")
-                                    .fontWeight(.regular)
-                            }
-                        }
-                    }
-                    .padding()
-                    .background(Rectangle().foregroundColor(Color(red: 0.0, green: 0.4, blue: 1.0, opacity: 0.5)))
-                    .cornerRadius(30)
-                    .shadow(radius: 15)
+                    Image("meee")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(30)
+                        .padding()
                     
-                    // red box
-                    VStack(spacing: 12.0) {
-                        
-                        Text("laurie goes to kings math school. she met cassidy and angel and jolnar there and they changed her life. she's now co-president and secretly doesn't even like maths that much.")
-                        HStack {
-                            Text("laurie is obsessed w her friends. specifically her best friend lili. laurie tells lili everything. lili listens and makes funny comments. laurie loves lili.")
-                            Image("loz&lili2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(30)
-                        }
-                        HStack {
-                            Image("sibs")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(30)
-                            Text("for some reason laurie also loves her brother. they're besties. for a 15 y/o, he's abnormally cool and funny. laurie thinks her parents did a good job.")
-                        }
+                    //use buttons and varibales ?
+                    NavigationLink(destination: p1()) {
+                        Text("key facts")
+                            .font(.title)
+                    } // nlink
+                    
+                    NavigationLink(destination: p2()) {
+                        Text("microautobiography")
+                            .font(.title)
+                    } // nlink
+                    
+                    NavigationLink(destination: p3()) {
+                        Text("photo library")
+                            .font(.title)
                     }
-                    .padding()
-                    .background(Rectangle().foregroundColor(Color(red: 1.0, green: 0.07, blue: 0.08, opacity: 0.5)))
-                    .cornerRadius(30)
-                    .shadow(radius: 15)
+                    
+                    /*Button("key facts") {
+                        nav = p1
+                    }
+                    
+                    Button("microautobiography") {
+                        nav = p2
+                    }
+                    
+                    Button("photo library") {
+                        nav = p3
+                    }*/
+
                 } // vstack close
             } // zstack closer
         } // nstack closer
